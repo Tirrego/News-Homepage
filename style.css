@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    
+}
+
+p {
+    color:hsl(236, 13%, 42%)
+}
+
+h1 {
+    font-weight: 800;
+}
+
+h4 {
+    font-weight: 800;
+    font-size: 1.1rem;
+    margin: 1rem 0;
+}
+
+
+
+hr {
+    margin: 2rem 0;
+    border: 1px solid  hsl(236, 13%, 42%);
+    font-weight: 400;
+}
+
+
+
+.btn {
+    width: 11rem;
+    height: 3rem;
+    background-color: hsl(5, 85%, 63%);
+    color: white;
+    border: none;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 2rem;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background-color: black;
+}
+
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 3rem 20rem 14rem 9rem;
+
+    grid-template-areas: "header header header"
+                         "main main sidebar"
+                         "main-heading read-more sidebar"
+                         "box1 box2 box3";
+
+    grid-gap: 1.5rem;
+    font-family: "Inter", sans-serif;
+    max-width: 1110px;
+    margin: 4rem auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: header;
+    margin-bottom: 2rem;
+}
+
+.navi a{
+margin: 0 1.5rem;
+color: hsl(236, 13%, 42%);
+}
+
+
+.navi a:hover {
+    color: hsl(35, 77%, 62%)
+}
+
+main {
+    grid-area: main;
+
+}
+
+.main-heading {
+    grid-area: main-heading;
+    font-weight: 800;
+    font-size: 1.4rem;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: black;
+    color: hsl(233, 8%, 79%);
+    padding: 1.5rem;
+    font-weight: 400;
+}
+
+.sidebar h1 {
+    color: hsl(35, 77%, 62%);
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.sidebar h3 {
+    color: hsl(36, 100%, 99%);
+    margin: 1rem 0;
+}
+
+.sidebar p {
+    color: hsl(233, 8%, 79%)
+}
+
+.box1 {
+    display: flex;
+    grid-area: box1;
+    
+}
+
+.box2 {
+    grid-area: box2;
+    display: flex;
+}
+
+.box3 {
+    grid-area: box3;
+    display: flex;
+}
+
+.boxen h3 {
+    font-size: 2rem;
+    color: hsl(233, 8%, 79%)
+}
+
+.img-box {
+    margin-right: 1rem;
+}
+
+.read-more {
+    grid-area: read-more;
+
+}
+
+.main-img {
+    width: 100%;
+    object-fit: cover;
+}
+
+#burger {
+    display: none;
+}
+
+#burgerMenu {
+    height: 100vh;
+    width: 300px;
+    background: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+@media only screen and (max-width: 900px){
+    .container {
+        display: block;
+        margin: 1rem 2rem;
+    }
+    
+    .navi {
+        display: none;
+    }
+
+    .main-img {
+        background-image: url("assets/images/image-web-3-mobile.jpg");
+    }
+
+    .sidebar {
+        margin: 2rem 0rem;
+    }
+
+    .boxen {
+        margin: 2rem 0rem;
+    }
+
+    #burger {
+        display: block;
+    }
+
+    #burgerMenu {
+        flex-direction: column;
+        justify-content: center;
+
+    } 
+
+    #burgerMenu a {
+        margin: 2rem 2rem;
+        color: hsl(236, 13%, 42%);
+        font-family: 800;
+        font-size: 1.3rem;
+    }
+
+    #close {
+        width: 30px;
+        position: absolute;
+        right: 5px;
+        top: 50px;
+    }
+
+}
